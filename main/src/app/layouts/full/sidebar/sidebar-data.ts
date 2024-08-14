@@ -39,6 +39,16 @@ export const navItems: NavItem[] = [
     route: '/ui-components/tooltips',
   },
   {
+    displayName: 'Forms',
+    iconName: 'solar:file-text-line-duotone',
+    route: '/ui-components/forms',
+  },
+  {
+    displayName: 'Tables',
+    iconName: 'solar:tablet-line-duotone',
+    route: '/ui-components/tables',
+  },
+  {
     navCap: 'Auth',
     divider: true
   },

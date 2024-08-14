@@ -21,14 +21,20 @@ html .mat-drawer-container {
   min-height: 100vh;
   width: 100%;
   flex: 1;
-  // height: 100%;
+  height: 100%;
 }
 
 .body-wrapper {
   border-radius: 20px;
   background: $body-bg;
-  margin: 0 15px 30px;
+  margin: 0 15px 30px 0;
   min-height: calc(100% - 102px);
+}
+
+@media (max-width: 1023px) {
+  .body-wrapper {
+    margin-right: 0;
+  }
 }
 
 .pageWrapper {

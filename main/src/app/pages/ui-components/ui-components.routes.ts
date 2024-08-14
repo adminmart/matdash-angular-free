@@ -6,6 +6,8 @@ import { AppChipsComponent } from './chips/chips.component';
 import { AppListsComponent } from './lists/lists.component';
 import { AppMenuComponent } from './menu/menu.component';
 import { AppTooltipsComponent } from './tooltips/tooltips.component';
+import { AppFormsComponent } from './forms/forms.component';
+import { AppTablesComponent } from './tables/tables.component';
 
 export const UiComponentsRoutes: Routes = [
   {
@@ -30,6 +32,14 @@ export const UiComponentsRoutes: Routes = [
       {
         path: 'tooltips',
         component: AppTooltipsComponent,
+      },
+      {
+        path: 'forms',
+        component: AppFormsComponent,
+      },
+      {
+        path: 'tables',
+        component: AppTablesComponent,
       },
     ],
   },
