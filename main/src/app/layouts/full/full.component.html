@@ -1,0 +1,84 @@
+<mat-sidenav-container
+  class="mainWrapper blue_theme light-theme"
+  autosize
+  autoFocus
+  dir="ltr"
+>
+  <!-- ============================================================== -->
+  <!-- Vertical Sidebar -->
+  <!-- ============================================================== -->
+
+  <mat-sidenav
+    #leftsidenav
+    [mode]="isOver ? 'over' : 'side'"
+    [opened]="!isOver"
+    (openedChange)="onSidenavOpenedChange($event)"
+    (closedStart)="onSidenavClosedStart()"
+    class="sidebarNav"
+  >
+    <div class="flex-layout">
+      <app-sidebar
+        (toggleMobileNav)="sidenav.toggle()"
+        [showToggle]="isOver"
+      ></app-sidebar>
+
+      <mat-nav-list class="sidebar-list">
+        @for(item of navItems; track item) {
+        <app-nav-item [item]="item" (notify)="sidenav.toggle()"> </app-nav-item>
+        }
+      </mat-nav-list>
+
+      <div class="p-20">
+        <div
+          class="bg-light-primary d-flex align-items-center rounded p-20"
+        >
+          <div>
+            <h5 class="mat-subtitle-1 f-s-16 f-w-600 m-b-8">
+              Upgrade <br />to pro
+            </h5>
+            <a
+              mat-flat-button
+              color="primary"
+              href="https://adminmart.com/product/matdash-material-angular-dashboard-template/?ref=5"
+              target="_blank"
+              class="d-flex justify-content-center"
+            >
+              Buy Pro
+            </a>
+          </div>
+          <div class="side-img m-l-auto">
+            <img
+              src="./assets/images/backgrounds/rupee.png"
+              alt="image"
+              width="90"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <!-- ============================================================== -->
+  <!-- Main Content -->
+  <!-- ============================================================== -->
+  <mat-sidenav-content class="contentWrapper" #content>
+    <!-- ============================================================== -->
+    <!-- VerticalHeader -->
+    <!-- ============================================================== -->
+
+    <app-header
+      [showToggle]="!isOver"
+      (toggleCollapsed)="toggleCollapsed()"
+      (toggleMobileNav)="sidenav.toggle()"
+    ></app-header>
+
+    <div class="body-wrapper">
+      <main class="pageWrapper maxWidth">
+        <!-- ============================================================== -->
+        <!-- Outlet -->
+        <!-- ============================================================== -->
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

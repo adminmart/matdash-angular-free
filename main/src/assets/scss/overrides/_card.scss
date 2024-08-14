@@ -1,0 +1,49 @@
+// card
+.mat-mdc-card {
+  margin-bottom: 30px;
+  //border-radius: $border-radius;
+}
+.mat-mdc-card-header {
+  padding: 30px 30px 0;
+}
+
+.mat-mdc-card-content {
+  padding: 0 30px;
+}
+
+.mat-mdc-card {
+  background-color: $cardbg;
+  > .mat-mdc-card-content {
+    padding: 30px;
+  }
+}
+
+.cardWithShadow,
+.mat-mdc-menu-panel,
+.mat-expansion-panel {
+  box-shadow: $cardshadow !important;
+}
+
+.mat-mdc-card-title {
+  line-height: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.mat-mdc-card-subtitle {
+  color: $bodyColor;
+}
+
+.mdc-card__actions {
+  padding: 30px;
+}
+
+// chip
+html .mat-mdc-chip {
+  height: 30px;
+  font-size: 14px;
+  background-color: $light;
+}
+
+.mat-mdc-progress-bar {
+  border-radius: 6px;
+}

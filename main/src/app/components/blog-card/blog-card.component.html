@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+  @for(cardimg of cardimgs; track cardimg.imgSrc) {
+  <div class="col-lg-4">
+    <mat-card class="cardWithShadow position-relative overflow-hidden">
+      <div class="position-relative">
+        <img
+          mat-card-image
+          src="{{ cardimg.imgSrc }}"
+          alt="Photo of a Shiba Inu"
+          class="w-100"
+        />
+        <div
+          class="card-overlay h-100 d-flex align-items-end justify-content-end"
+        >
+          <span
+            class="f-s-12 f-w-600 m-y-16 m-r-16 p-y-4 p-x-8 rounded-pill bg-white"
+            >{{ cardimg.time }}</span
+          >
+        </div>
+      </div>
+
+      <mat-card-content class="p-y-24">
+        <div class="user-category">
+          <div class="m-b-20">
+            <img src="{{ cardimg.user }}" class="rounded-circle" width="40" />
+          </div>
+          <span
+            class="f-s-12 m-y-16 f-w-600 p-x-8 p-y-4 bg-light rounded-pill"
+            >{{ cardimg.category }}</span
+          >
+        </div>
+        <mat-card-title class="m-t-20 text-hover-primary cursor-pointer"><a routerLink="['/']" class="hover-text">{{
+          cardimg.title
+        }}</a></mat-card-title>
+        <div class="d-flex align-items-center justify-content-center m-t-24">
+          <div class="d-flex align-items-center">
+            <span class="m-r-12 f-s-14 d-flex align-items-center"
+              ><i-tabler name="eye" class="icon-18 m-r-4"></i-tabler
+              >{{ cardimg.views }}</span
+            >
+            <span class="f-s-14 d-flex align-items-center"
+              ><i-tabler name="message-2" class="icon-18 m-r-4"></i-tabler
+              >{{ cardimg.comments }}</span
+            >
+          </div>
+          <span class="m-l-auto f-s-14 d-flex align-items-center">
+            <i-tabler name="point" class="icon-14 m-r-4 d-flex"></i-tabler>
+            {{ cardimg.date }}
+          </span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  }
+</div>

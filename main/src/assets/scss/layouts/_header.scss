@@ -1,0 +1,16 @@
+html .topbar {
+  background-color: $toolbar;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  height: $header-height;
+  gap: 6px;
+}
+
+.topbar-dd {
+  min-width: 200px !important;
+}
+
+.object-cover {
+  object-fit: cover;
+}

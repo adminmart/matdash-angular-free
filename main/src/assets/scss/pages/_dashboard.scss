@@ -1,0 +1,86 @@
+.timeline {
+  position: relative;
+  .timeline-item {
+    position: relative;
+    height: 59px;
+    &:last-child {
+      // height: 30px;
+      .point {
+        .timeline-border {
+          display: none !important;
+        }
+      }
+    }
+    .time {
+      padding: 6px 16px 6px 0;
+      min-width: 90px;
+      flex-shrink: 0;
+    }
+    .desc {
+      padding: 3px 16px;
+    }
+    .timline-border {
+      width: 1px;
+      height: 100%;
+      background-color: $borderColor;
+      flex-shrink: 0;
+    }
+    .point {
+      flex-direction: column;
+      .timeline-badge {
+        width: 12px;
+        height: 12px;
+        border-radius: 50px;
+        background-color: transparent;
+        flex-shrink: 0;
+      }
+
+      .timeline-border {
+        width: 1px;
+        height: 100%;
+        background-color: $borderColor;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+// theme select
+.theme-select {
+  width: 125px;
+  height: 40px;
+  .mat-form-field-infix {
+    padding: 6px 0 1px !important;
+  }
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+  .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    border-color: $borderColor;
+  }
+  .mdc-text-field--outlined
+    .mdc-notched-outline
+    .mdc-notched-outline__trailing {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    border-color: $borderColor;
+  }
+  .mat-mdc-form-field-flex {
+    height: 40px;
+    align-items: center;
+  }
+}
+
+.user-category {
+  margin-top: -45px;
+  z-index: 1;
+  position: relative;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,0 +1,26 @@
+@if(item.navCap) { @if(item.divider) {
+<span class="sidebar-divider"></span>
+}
+<div mat-subheader class="nav-caption">
+  {{ item.navCap }}
+</div>
+} @else {
+<a
+  mat-list-item
+  (click)="onItemSelected(item)"
+  [ngClass]="{
+      'mat-toolbar mat-primary activeMenu': item.route
+        ? router.isActive(item.route, true)
+        : false,
+    }"
+  class="menu-list-item"
+>
+  <span
+    class="iconify routeIcon"
+    matListItemIcon
+    [attr.data-icon]="item.iconName"
+  ></span>
+
+  <span class="hide-menu">{{ item.displayName }}</span>
+</a>
+}
