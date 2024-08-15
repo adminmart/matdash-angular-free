@@ -171,10 +171,9 @@
   border-radius: 18px;
   padding: 0px 10px;
   opacity: 0.8;
-  left: unset;
-  bottom: 6px;
-  margin-bottom: unset;
-  margin-right: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+  bottom: 20px;
 }
 
 .theme-carousel .carousel-indicators [data-bs-target] {
